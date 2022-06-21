@@ -38,6 +38,7 @@ LOGOUT_REDIRECT_URL = 'login'
 INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     "projects.apps.ProjectsConfig",
+    "markdownify.apps.MarkdownifyConfig",
     "tasks.apps.TasksConfig",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -46,6 +47,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+#added Markdownify to disable bleach
+
+MARKDOWNIFY = {
+    "default": {
+        "BLEACH": False
+    }
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
