@@ -30,7 +30,7 @@ class TaskViewList(LoginRequiredMixin, ListView):
         return Task.objects.filter(assignee=self.request.user)
 
 
-def TaskUpdateView(request, pk):
+def TaskUpdate(request, pk):
     if request.method == "POST":
         task = Task.objects.get(pk=pk)
         form = is_complete_form(request.POST, instance=task)
