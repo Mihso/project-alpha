@@ -9,7 +9,7 @@
         <p>
             <a href="{% url 'create_task' %}">Create a new task</a>
         </p>
-        {% if project.tasks %}
+        {% if project.tasks.all %}
         <table>
             <thead>
                 <th>Name</th>
@@ -30,7 +30,7 @@
                 {% endfor %}
             </tbody>
         </table>
-        (% else %)
+        {% else %}
         <p>This project has no tasks</p>
         {% endif %}
     </div>
