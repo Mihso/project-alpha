@@ -29,8 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "login"
 
 
 # Application definition
@@ -48,13 +48,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-#added Markdownify to disable bleach
+# added Markdownify to disable bleach
 
-MARKDOWNIFY = {
-    "default": {
-        "BLEACH": False
-    }
-}
+MARKDOWNIFY = {"default": {"BLEACH": False}}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
